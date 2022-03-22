@@ -29,14 +29,13 @@ wVal = 0x37E1
 #while True:
 
 print("set CS1 to Hihg")
-wIndex = 0xf1ff
+wIndex = 0xf9ff
 dev.ctrl_transfer(reqType, bReq, wVal, wIndex, [])
 time.sleep(1)
 print("set CS1 to High & RST mt7628")
-wIndex = 0xf5ff
+wIndex = 0xfdff
 dev.ctrl_transfer(reqType, bReq, wVal, wIndex, [])
 time.sleep(1)
 print("set CS1 to High & release RST")
-wIndex = 0xf1ff
+wIndex = 0xf9ff
 dev.ctrl_transfer(reqType, bReq, wVal, wIndex, [])
-
